@@ -1,5 +1,5 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  "SELECT books.title, books.year, DISTINCT books.series_id FROM books GROUP BY books.year ;"
+  "SELECT books.title, books.year FROM books GROUP BY books.year COUNT(books.series_id) Order BY books.series_ID LIMIT 1;"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
